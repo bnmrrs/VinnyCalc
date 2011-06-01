@@ -1,0 +1,9 @@
+%h1
+  Welcome to VinnyCalc
+
+-if @logged_in
+  = "You've been to Vincenzo's #{@visit_count} times!"
+  = "That's $#{@sandwich_cost} worth of sandwiches!"
+-else
+  %a{:href => "/auth/foursquare"}
+    = image_tag 'foursquare.png'
